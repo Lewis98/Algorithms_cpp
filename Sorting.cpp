@@ -3,7 +3,8 @@
 
 // - - - Preliminary - - - \\
 
-void swap(std::vector<int> &arr, int index_1, int index_2){
+template<typename T>
+void swap(std::vector<T> &arr, int index_1, int index_2){
     // Swaps values of index 1 and index 2 in provided array
     int tmp = arr[index_1];
     arr[index_1] = arr[index_2];
@@ -13,9 +14,11 @@ void swap(std::vector<int> &arr, int index_1, int index_2){
 
 // - - - - A list of Sorting Algorithms - - - - \\
 
-std::vector<int> inserstionSort(std::vector<int> input){
+// Insertion Sort | Best : O(n) - Worst : O(n^2) - Avg : O(n^2) |
+template <typename T>
+std::vector<T> inserstionSort(std::vector<T> input){
 
-    std::vector<int> output = input;
+    std::vector<T> output = input;
 
     for (int i = 0; i < output.size(); i++){
         for (int e = i; e > 0 && output[e-1] > output[e]; e--){
@@ -25,3 +28,7 @@ std::vector<int> inserstionSort(std::vector<int> input){
 
     return output;
 };
+
+
+
+

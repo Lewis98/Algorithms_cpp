@@ -3,6 +3,7 @@
 
 #include <vector>
 
-std::vector<int> inserstionSort(std::vector<int> input);
+template<typename T>
+std::vector<T> inserstionSort(std::vector<T> input);
 
 #endif
