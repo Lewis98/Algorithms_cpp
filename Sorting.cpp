@@ -14,9 +14,14 @@ void swap(std::vector<int> &arr, int index_1, int index_2){
 // - - - - A list of Sorting Algorithms - - - - \\
 
 std::vector<int> inserstionSort(std::vector<int> input){
-    for (int i = 0; i < input.size(); i++){
-        while (int e = i > 0 && input[e-1] > input[e]){
-            e--;
+
+    std::vector<int> output = input;
+
+    for (int i = 0; i < output.size(); i++){
+        for (int e = i; e > 0 && output[e-1] > output[e]; e--){
+            swap(output, e, e-1);
         };
     };
+
+    return output;
 };
